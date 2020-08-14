@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Todos from "./Todos";
+// import Todos from "./Todos";
 import propTypes from "prop-types";
 
 export class TodoItem extends Component {
@@ -23,15 +23,15 @@ export class TodoItem extends Component {
     };
   };
 
-  markComplete = e => {
-    console.log(this.props.todo);
-  };
+  markComplete(id) {
+    console.log(id);
+  }
   render() {
+    const { id, title } = this.props.todo;
     return (
       <div style={this.getStyle()}>
         <p>
-          <input type="checkbox" onChange={this.markComplete} />{" "}
-          {this.props.todo.title}
+          <input type="checkbox" onClick={this.markComplete(id)} /> {title}
         </p>
       </div>
     );

@@ -3,7 +3,7 @@ import Todos from "./components/Todos";
 
 import "./App.css";
 
-import propTypes from "prop-types";
+// import propTypes from "prop-types";
 
 class App extends Component {
   state = [
