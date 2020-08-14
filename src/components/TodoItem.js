@@ -23,9 +23,9 @@ export class TodoItem extends Component {
     };
   };
 
-  markComplete(e) {
-    console.log(this.props);
-  }
+  markComplete = e => {
+    console.log(this.props.todo);
+  };
   render() {
     return (
       <div style={this.getStyle()}>

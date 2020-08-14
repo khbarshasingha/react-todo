@@ -3,36 +3,40 @@ import Todos from "./components/Todos";
 
 import "./App.css";
 
+import propTypes from "prop-types";
+
 class App extends Component {
-  state = {
-    todos: [
-      {
-        id: 1,
-        title: "javascript",
-        completed: true
-      },
+  state = [
+    {
+      id: 1,
+      title: "javascript",
+      completed: true
+    },
 
-      {
-        id: 2,
-        title: "react todo",
-        completed: false
-      },
+    {
+      id: 2,
+      title: "react todo",
+      completed: false
+    },
 
-      {
-        id: 3,
-        title: "node ",
-        completed: false
-      }
-    ]
-  };
+    {
+      id: 3,
+      title: "node ",
+      completed: false
+    }
+  ];
 
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state} />
       </div>
     );
   }
 }
 
 export default App;
+
+// App.propTypes = {
+//   todos: propTypes.object.isRequired
+// };
